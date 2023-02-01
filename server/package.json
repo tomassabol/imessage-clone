@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@graphql-tools/schema": "^9.0.15",
+    "dotenv": "^16.0.3",
     "ts-node": "^10.9.1"
   }
 }
