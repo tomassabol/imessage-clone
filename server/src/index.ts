@@ -9,6 +9,7 @@ import http from 'http';
 import typeDefs from './graphql/typeDefs';
 import resolvers from './graphql/resolvers';
 import { getSession } from 'next-auth/react';
+import { PrismaClient } from '@prisma/client';
 import * as dotenv from 'dotenv';
 import { GraphQLContext } from './util/types';
 
@@ -25,6 +26,12 @@ async function main() {
         origin: 'http://localhost:3000',
         credentials: true
     };
+
+    /**
+     * Context parameters
+     */
+    const prisma = new PrismaClient();
+    // const pubsub = new PubSub();
 
     const server = new ApolloServer({
         schema,
