@@ -3,8 +3,9 @@ const resolvers = {
         searchUsers: () => {},
     },
     Mutation: {
-        createUsername: () => {
-            console.log('createUsername from resolvers')
+        createUsername: (_: any, args: { username: string }, context: any) => {
+            const { username } = args;
+            console.log('HEY AT THE API ', username);
         },
     }
 }

@@ -21,6 +21,7 @@
   "dependencies": {
     "@graphql-tools/schema": "^9.0.15",
     "dotenv": "^16.0.3",
+    "next-auth": "^4.19.2",
     "ts-node": "^10.9.1"
   }
 }
